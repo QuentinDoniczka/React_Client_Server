@@ -41,7 +41,7 @@ class FilterableProductTable extends React.Component {
   };
 
   componentDidMount() {
-    fetch('http://localhost:3000/api/products')
+    fetch('/api/products')
       .then(response => response.json())
       .then(data => {
         const products = data.map(row => ({
