@@ -48,3 +48,32 @@ app.get('*', (_, res) => {
 app.listen(PORT, () => {
   console.log(`le serveur est lancé sur le port : ${PORT}`)
 });
+
+
+// Fonction pour ajouter un produit dans la base de données
+function addProduct(product, callback) {
+  const sql = 'INSERT INTO products (category, name, price, stocked) VALUES (?, ?, ?, ?)';
+  const params = [product.category, product.name, product.price, product.stocked ? 1 : 0];
+  db.run(sql, params, function (err) {
+    if (err) {
+      callback(err);
+    } else {
+      callback(null, { id: this.lastID, ...product });
+    }
+  });
+}
+
+
+// Route POST pour ajouter un produit
+app.post('/api/products', (req, res) => {
+  const product = req.body;
+  addProduct(product, (err, newProduct) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send('Internal server error');
+    } else {
+      res.status(201).json(newProduct);
+    }
+  });
+});
+

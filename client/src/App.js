@@ -30,7 +30,7 @@
 
 
 import React from 'react';
-
+import AddProductForm from './AddProductForm';
 
 class FilterableProductTable extends React.Component {
   state = {
@@ -193,6 +193,7 @@ const App = () => {
   return (
     <div>
       <FilterableProductTable />
+      <AddProductForm />
     </div>
   );
 };
