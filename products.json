@@ -1,0 +1,64 @@
+{
+    "products": [
+      {
+        "category": "Sporting Goods",
+        "name": "Football",
+        "price": "$49.99",
+        "stocked": true
+      },
+      {
+        "category": "Sporting Goods",
+        "name": "Baseball",
+        "price": "$9.99",
+        "stocked": true
+      },
+      {
+        "category": "Sporting Goods",
+        "name": "Basketball",
+        "price": "$29.99",
+        "stocked": false
+      },
+      {
+        "category": "Electronics",
+        "name": "iPod Touch",
+        "price": "$99.99",
+        "stocked": true
+      },
+      {
+        "category": "Electronics",
+        "name": "iPhone 5",
+        "price": "$399.99",
+        "stocked": false
+      },
+      {
+        "category": "Electronics",
+        "name": "Nexus 7",
+        "price": "$199.99",
+        "stocked": true
+      },
+      {
+        "category": "Toys",
+        "name": "Teddy bear",
+        "price": "$19.99",
+        "stocked": true
+      },
+      {
+        "category": "Toys",
+        "name": "Lego set",
+        "price": "$39.99",
+        "stocked": false
+      },
+      {
+        "category": "Clothing",
+        "name": "T-shirt",
+        "price": "$14.99",
+        "stocked": true
+      },
+      {
+        "category": "Clothing",
+        "name": "Jeans",
+        "price": "$59.99",
+        "stocked": true
+      }
+    ]
+  }
